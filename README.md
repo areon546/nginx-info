@@ -11,13 +11,10 @@ A repository containing various pieces of information about nginx for the purpos
 
 ## Make commands
 
-```make
-nginx-local:
-  ln -s ./localConfig /etc/nginx/sites-enabled/DIRECTORY
+Note: You have to set the variable `WEB0=-CONF` to customise the name of the config file when copied over.
 
-nginx-prod:
-  ln -s ./prodConfig /etc/nginx/sites-available/DIRECTORY
-
-nginx-stop:
-  sudo nginx -s reload
-```
+- `reload`  : updates the nginx daemon, recommended command if updated config
+- `link`    : links the config file from sites-available to sites-enabled, requires `local` or `prod` to be ran beforehand
+- `local`   : copies over the local config file
+- `prod`    : copies over the production config file
+- `stop`    : updates the nginx daemon with new config files
