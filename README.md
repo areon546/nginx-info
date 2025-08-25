@@ -10,12 +10,12 @@ since the nginx website feels cluttered.
 
 There are a couple ways to use this repository:
 
-1. Download [setup.sh](./setup.sh).
+1. Download [setup.sh](https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/setup.sh).
 
 - Give it executable status (`chmod u+x setup.sh`)
 - Run it: `./setup.sh --dir=[DIRNAME]`
 
-2. Download [nginx.zip](./nginx.zip) and unzip that.
+2. Download [nginx.zip](https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/nginx.zip) and unzip that.
 
 - Manually replace all instances of `DIRECTORY` with the directory of the relevant files.
 
