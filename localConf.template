@@ -19,13 +19,13 @@ server {
 
  	server_name _; 
 
- 	root /home/dragons-den/Desktop/git/DIRECTORY/html/;
+ 	root /home/dragons-den/Desktop/git/${DIR}/html/;
  	index index.html;
 
 
 	# redirect for static files
 	location /static/ {
-    	root /home/dragons-den/Desktop/git/DIRECTORY;
+    	root /home/dragons-den/Desktop/git/${DIR};
     	#expires 30d;
   	}
 
