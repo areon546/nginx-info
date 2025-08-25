@@ -43,7 +43,7 @@ while [[ "$1" != "" ]]; do
 done
 
 # envsubst various files
-function downloadAndTemplate() {
+function replace_env() {
   local link="$1"
   local name="$2"
   local dir="$3"
@@ -66,6 +66,6 @@ then
   exit 1
 fi
 
-downloadAndTemplate "https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/nginx.tempalte/localConf.template" localConf "$dir"
-downloadAndTemplate "https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/nginx.template/prodConfignf.template" prodConf "$dir"
-downloadAndTemplate "https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/nginx.template/Makefile.template" Makefile "$dir"
+replace_env "https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/nginx.tempalte/localConf.template" localConf "$dir"
+replace_env "https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/nginx.template/prodConfignf.template" prodConf "$dir"
+replace_env "https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/nginx.template/Makefile.template" Makefile "$dir"

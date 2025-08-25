@@ -10,7 +10,7 @@ server {
  	listen 80;
  	listen [::]:80;
 
- 	server_name areon546.co.uk; 
+ 	server_name example.com; 
 
  	root /home/ubuntu/websites/${DIR}/html;
  	index index.html;

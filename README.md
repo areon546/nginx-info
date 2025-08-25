@@ -5,8 +5,21 @@ At it's most basic, it is a web server.
 It can also be a reverse proxy.
 It is very customisable and has many features, some should be avoided (Eg using it for authentication, you should implement authentication by yourself).
 
-This is a repository containing various pieces of information about nginx for the purposes of being stored in a centralised location.
-The website has too many things in it.
+This is a repository containing various pieces of information about nginx for the purposes of being stored in a centralised location,
+since the nginx website feels cluttered.
+
+There are a couple ways to use this repository:
+
+1. Download [setup.sh](./setup.sh).
+
+- Give it executable status (`chmod u+x setup.sh`)
+- Run it: `./setup.sh --dir=[DIRNAME]`
+
+2. Download [nginx.zip](./nginx.zip) and unzip that.
+
+- Manually replace all instances of `DIRECTORY` with the directory of the relevant files.
+
+3. Fork this repo, make the relevant changes to the config files in nginx/.
 
 ## General Notes
 
@@ -25,14 +38,10 @@ Note: You have to set the variable `WEB0=-CONF` to customise the name of the con
 - `prod`    : copies over the production config file
 - `stop`    : updates the nginx daemon with new config files
 
-## Using the config files
-
-Firstly, replace all instances of `$(DIRECTORY)` with
-
-## Redirects for specific Paths
-
-With nginx, you can change the configuration for specific paths on the website.
-EG: `example.com/static/global.css` can be placed in a completely separate location on the computer from `example.com/static/assets`, or from `example.com/index.html`.
-You don't need these to be subdirectories of one another.
-
-As there is such freedom
+<!-- ## Redirects for specific Paths -->
+<!---->
+<!-- With nginx, you can change the configuration for specific paths on the website. -->
+<!-- EG: `example.com/static/global.css` can be placed in a completely separate location on the computer from `example.com/static/assets`, or from `example.com/index.html`. -->
+<!-- You don't need these to be subdirectories of one another. -->
+<!---->
+<!-- As there is such freedom -->
