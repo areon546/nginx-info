@@ -66,6 +66,6 @@ then
   exit 1
 fi
 
-downloadAndTemplate "https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/nginx/localConf.template" localConf "$dir"
-downloadAndTemplate "https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/nginx/prodConfignf.template" prodConf "$dir"
-downloadAndTemplate "https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/nginx/Makefile.template" Makefile "$dir"
+downloadAndTemplate "https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/nginx.tempalte/localConf.template" localConf "$dir"
+downloadAndTemplate "https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/nginx.template/prodConfignf.template" prodConf "$dir"
+downloadAndTemplate "https://raw.githubusercontent.com/areon546/nginx-info/refs/heads/main/nginx.template/Makefile.template" Makefile "$dir"

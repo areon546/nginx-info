@@ -1,0 +1,16 @@
+DIRECTORY=DIRECTORY
+
+reload:
+	make stop
+
+link:
+	ln -s /etc/nginx/sites-available/$(DIRECTORY) /etc/nginx/sites-enabled/$(DIRECTORY)
+
+cp-local:
+	cp -f ./localConfig /etc/nginx/sites-available/$(DIRECTORY)
+
+cp-prod:
+	cp -f ./prodConfig /etc/nginx/sites-available/$(DIRECTORY)
+
+stop:
+	sudo nginx -s reload
