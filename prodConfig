@@ -1,0 +1,29 @@
+# You can move that to a different file under sites-available/ and symlink that
+# to sites-enabled/ to enable it.
+
+# 	location ~* \.(js|jpg|png|css)$ {
+#       root static;
+#       expires 30d;
+#   }
+
+server {
+ 	listen 80;
+ 	listen [::]:80;
+
+ 	server_name areon546.co.uk; 
+
+ 	root /home/ubuntu/websites/DIRECTORY/html;
+ 	index index.html;
+
+
+	# redirect for static files
+	location /static/ {
+    	root /home/ubuntu/websites/DIRECTORY;
+    	expires 30d;
+  	}
+
+
+ 	location / {
+ 		try_files $uri $uri/ =404;
+ 	}
+}
